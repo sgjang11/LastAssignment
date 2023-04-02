@@ -1,4 +1,4 @@
-const todo = document.getElementById("todo");
+const todo = document.querySelector("#todo");
 const todoInput = todo.querySelector("input");
 const todoBtn = todo.querySelector("button");
 const todoList = document.querySelector("#todoList ul");

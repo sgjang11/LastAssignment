@@ -1,9 +1,13 @@
-const todo = document.querySelector("#todo");
-const noLoginAlert = document.querySelector("#noLoginAlert");
+const toDo = document.querySelector("#todo");
+const toDoInput = toDo.querySelector("input");
+const toDoBtn = toDo.querySelector("button");
+const toDoH2 = toDo.querySelector("h2");
 
 const todoListSpan = document.querySelector("#todoList span");
 
-const loginToggleBtn = document.querySelector("#loginToggle button");
+const loginToggle = document.querySelector("#loginToggle");
+const loginToggleBtn = loginToggle.querySelector("button");
+
 const loginInput = document.querySelector("#loginToggle input");
 
 const joinInput = document.querySelector("#join input");
@@ -60,7 +64,7 @@ function login(){
         return;
     }
     if(usernames.length === 0) {
-        saveUser();
+        noneUser();
     }else{
         let check = "NoExist";
         usernames.every(username => {
@@ -77,8 +81,8 @@ function login(){
             loginInput.classList.add(HIDDENCLASS);
             joinInput.classList.add(HIDDENCLASS);
             joinBtn.classList.add(HIDDENCLASS);
-            todo.classList.remove(HIDDENCLASS);
-            noLoginAlert.classList.add(HIDDENCLASS);
+            toDo.classList.remove(HIDDENCLASS);
+            doLogin();
             loginToggleBtn.innerText = "LOGOUT"
         }else{
             noneUser();
@@ -98,13 +102,14 @@ function logout(){
     loginInput.classList.remove(HIDDENCLASS);
     joinInput.classList.remove(HIDDENCLASS);
     joinBtn.classList.remove(HIDDENCLASS);
-    noLoginAlert.classList.remove(HIDDENCLASS);
+    toDoH2.classList.remove(HIDDENCLASS);
     noLogin();
     loginToggleBtn.innerText = "LOGIN"
 }
 
 loginToggleBtn.addEventListener("click", function(){
-    const buttonText = document.querySelector("#loginToggle button").innerText;
+    const buttonText = loginToggle.querySelector("button").innerText;
+    console.log(buttonText)
     if(buttonText === "LOGIN"){
         login();
     }else if(buttonText === "LOGOUT"){
@@ -122,7 +127,14 @@ function getUsername(){
 }
 
 function noLogin(){
-    todo.classList.add(HIDDENCLASS);
+    toDoInput.classList.add(HIDDENCLASS);
+    toDoBtn.classList.add(HIDDENCLASS);
+}
+
+function doLogin() {
+    toDoInput.classList.remove(HIDDENCLASS);
+    todoBtn.classList.remove(HIDDENCLASS);
+    toDoH2.classList.add(HIDDENCLASS);
 }
 
 noLogin();

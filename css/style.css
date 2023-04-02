@@ -115,19 +115,18 @@ button:hover {
     height: 40%;
 }
 
-#noLoginAlert {
+#todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#todo h2{
     width: 400px;
     background-color: #535353;
     text-align: center;
     color: white;
     font-weight: bold;
     border-radius: 5px;
-}
-
-#todo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #weather {
