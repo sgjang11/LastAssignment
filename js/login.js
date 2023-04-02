@@ -109,7 +109,6 @@ function logout(){
 
 loginToggleBtn.addEventListener("click", function(){
     const buttonText = loginToggle.querySelector("button").innerText;
-    console.log(buttonText)
     if(buttonText === "LOGIN"){
         login();
     }else if(buttonText === "LOGOUT"){
