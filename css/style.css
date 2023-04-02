@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-repeat : no-repeat;
+    background-size : cover;
+    position: relative;
+}
+
+input {
+    border: 3px solid #266a8a;
+    border-radius: 7px;
+    width: 250px;
+    height: 20px;
+    padding-left:3px ;
+}
+
+input:focus{
+    outline: none;
+    border-color: #2510e7;
+    box-shadow: 0 0 10px #9ecaed; 
+}
+
+button {
+    margin-left: 10px;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+button:hover {
+    color: white;
+    cursor: pointer;
+    background-color: rgb(44, 72, 124);
+}
+
+.hidden { 
+    display: none;
+}
+
+/* left */
+#left{
+    float: left;
+    width: 30%;
+    height: 70%;    
+}
+
+#todoList {
+    padding: 10px;
+    width: 90%;
+    background-color: rgba(224, 236, 236, 0.596);
+    overflow: auto; 
+}
+
+#todoList h2 {
+    border-bottom: 2px solid gray;
+    padding-bottom: 15px;
+}
+
+#todoList li {
+    padding-top: 10px;
+}
+
+#todoList button {
+    margin-left: 20px;
+}
+
+/* center */
+#center {
+    float: left;    
+    width: 40%;
+    height: 100%;
+}
+#centerTop {
+    height: 40%;
+}
+#join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+}
+#join input {
+    width: 150px;
+}
+
+#centerMiddle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+#currentTime {
+    text-align: center;
+    width: 200px;
+    border-radius: 10px;
+    background-color: rgba(223, 225, 226, 0.575);
+}
+
+#currentTime p{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#centerBottom {
+    height: 40%;
+}
+
+#todo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#weather {
+    margin-top: 20px;
+    text-align: center;
+}
+#weather span {
+    border-bottom: 2px solid;
+    color: whitesmoke;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* right */
+#right {
+    float: left;
+    width: 30%; 
+    height: 100%; 
+}
+
+#loginToggle {
+    margin-top: 13px;
+}
+
+#loginToggle input {
+    position: absolute;
+    right: 130px;
+    width: 150px;
+}
+
+#loginToggle button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    width: 100px;
+}
+
+#changeBtn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#changeBtn button {
+    width: 80px;
+    height: 40px;
+    background-color: rgb(133, 129, 125);
+    color: white;
+}
+
+#changeBtn button:hover {
+    background-color: #656d38;
+}
