@@ -43,7 +43,7 @@ button:hover {
 }
 
 .hidden { 
-    display: none;
+    display: none !important;
 }
 
 /* left */
@@ -113,6 +113,15 @@ button:hover {
 
 #centerBottom {
     height: 40%;
+}
+
+#noLoginAlert {
+    width: 400px;
+    background-color: #535353;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
 }
 
 #todo {

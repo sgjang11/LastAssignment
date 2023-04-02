@@ -1,3 +1,6 @@
+const todo = document.querySelector("#todo");
+const noLoginAlert = document.querySelector("#noLoginAlert");
+
 const todoListSpan = document.querySelector("#todoList span");
 
 const loginToggleBtn = document.querySelector("#loginToggle button");
@@ -74,6 +77,8 @@ function login(){
             loginInput.classList.add(HIDDENCLASS);
             joinInput.classList.add(HIDDENCLASS);
             joinBtn.classList.add(HIDDENCLASS);
+            todo.classList.remove(HIDDENCLASS);
+            noLoginAlert.classList.add(HIDDENCLASS);
             loginToggleBtn.innerText = "LOGOUT"
         }else{
             noneUser();
@@ -92,7 +97,9 @@ function logout(){
     todoListSpan.innerText = "";
     loginInput.classList.remove(HIDDENCLASS);
     joinInput.classList.remove(HIDDENCLASS);
-    joinBtn.classList.remove(HIDDENCLASS)
+    joinBtn.classList.remove(HIDDENCLASS);
+    noLoginAlert.classList.remove(HIDDENCLASS);
+    noLogin();
     loginToggleBtn.innerText = "LOGIN"
 }
 
@@ -114,5 +121,10 @@ function getUsername(){
     }
 }
 
+function noLogin(){
+    todo.classList.add(HIDDENCLASS);
+}
+
+noLogin();
 getUsername();
 joinBtn.addEventListener("click", join);
